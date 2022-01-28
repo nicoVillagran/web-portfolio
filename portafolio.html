@@ -23,7 +23,7 @@
         
         <header class="header" id="header">
             <nav class="header__nav span">
-                <a href="#home" class="header__li-a">
+                <a href="#home" class="header__li-a" tabindex="2">
                     <span class="header__a-span">Home</span>
                 </a>
                 <a href="#aboutMe" class="header__li-a">
@@ -163,28 +163,31 @@
                 </div>
             </article>
 
-            <!-- <article class="contact area" id="contact">
-                <h4 class="contact__h4">Contact me</h4>
-
-                <div class="contact__div">
-                    <img src="icono - character -cope.svg" class="contact__div-img" alt="">
+            <article class="contact area" id="contact">
+                <div class="conteinerIllustration">
+                    <div class="illustration">
+                        <img src="../html, css y javascript/practicas2/cara_ilustracion.svg" alt="">
+                    </div>
+                </div>
 
                     <form class="form">
-                        <div class="form__div">
+                        <h4 class="tecnology__h3 form__h3">Contact me</h4>
+
+                        <div class="form__label" tabindex="1">
                             <input type="email" placeholder="E-mail" class="form__input">
                         </div>
 
-                        <div class="form__div">
+                        <div class="form__label" tabindex="1">
                             <input type="text" placeholder="Asunto" class="form__input">
                         </div>
                         
-                        <div class="form__div">
-                            <input type="text" placeholder="Mensaje" class="form__input">
+                        <div class="label__textarea">
+                            <textarea class="form__input textArea" placeholder="Mensaje" name="textarea" cols="30" rows="10"></textarea>
+                            <!-- <input type="text" placeholder="Mensaje" class="form__input"> cambiar y hacer adaptable a el contenido -->
                         </div>
                         <input type="submit" value="Enviar" class="form__buttom">
                     </form>
-                </div>
-            </article> -->
+            </article>
         </section>
 
         <footer class="footer">

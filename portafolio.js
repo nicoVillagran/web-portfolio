@@ -15,7 +15,7 @@ function menuResponsive(){
 }
 
 function windowScroll() {
-    if(this.scrollY >= 520 && this.scrollY < 3011) {
+    if(this.scrollY >= 520) {
         document.querySelectorAll(".span").forEach(e => e.removeAttribute("hidden"));
         header.classList.add("header__scroll");
     }
