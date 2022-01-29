@@ -44,7 +44,7 @@ i {font-weight: 700;}
 
     --tarjet-width: 200px;
     --tarjet-height: 150px;
-    --widthOla: 150px;
+    --widthOla: 130px;
     --headerSize: 1.2em;
 }
 
@@ -78,7 +78,7 @@ i {font-weight: 700;}
     overflow: hidden;
 
     position: absolute;
-    bottom: -50px;
+    bottom: -40px;
 }
 
 .area {
@@ -272,6 +272,18 @@ i {font-weight: 700;}
 .header__a:hover::after {
     top: 0;
 }
+
+.start__iconFirst-circle {
+    width: 186px;
+    height: 186px;
+    background-color: #34343463;
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+
+    display: flex;
+}
+
+.firstIcon {margin: auto; width: 47%;}
 
 .inicio__h1 {
     font-size: 37px;

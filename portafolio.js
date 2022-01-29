@@ -23,5 +23,4 @@ function windowScroll() {
         header.classList.remove("header__scroll");
     }
 }
-
 // ------------------------------------------------------------ JS code.
