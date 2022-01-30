@@ -182,8 +182,8 @@ i {font-weight: 700;}
 
 .header__scroll {
     padding: .9em 1.2em;
-    background-color: var(--blue);
-    backdrop-filter: blur(2px);
+    background-color: var(--fillPage);
+    box-shadow: 0 1px 10px #1f618d42;
 }
 
 .header__li-a {
@@ -234,8 +234,6 @@ i {font-weight: 700;}
     transition: width .7s;
 }
 
-.header__li-a:active::after {width: 50%;}
-
 .header__a {
     padding: 7px 11px;
     border-radius: 7px;
@@ -245,12 +243,12 @@ i {font-weight: 700;}
     position: relative;
     right: -15%;
     overflow: hidden;
-    transition: 1s ease-in-out color;
+    /* transition: 1s ease-in-out; */
 }
 
 .iconMenu {display: none;}
 
-.header__a-span {
+.header__a-span, .header__a--span {
     position: relative;
     z-index: 3;
 }
@@ -266,11 +264,42 @@ i {font-weight: 700;}
     z-index: 1;
     top: -5em;
     left: 0;
-    transition: .4s ease-in-out all;
+    transition: top .6s ease-in-out;
 }
 
 .header__a:hover::after {
     top: 0;
+}
+
+.new__a {
+    padding: 7px 11px;
+    border-radius: 7px;
+    color: #1F618D;
+    font-weight: 600;
+    
+    position: relative;
+    right: -15%;
+    overflow: hidden;
+}
+
+.new__a:after {
+    content: "";
+    width: 100%;
+    height: 5em;
+    background-color:#00E081;
+    border-radius: 0 0 18.75px 18.75px;
+
+    position: absolute;
+    z-index: 1;
+    top: -5em;
+    left: 0;
+    transition: top .6s ease-in-out;
+}
+
+.new__a:hover::after,
+.new__a:hover .header__a--span {
+    top: 0;
+    color: var(--fillPage);
 }
 
 .start__iconFirst-circle {
@@ -431,8 +460,6 @@ i {font-weight: 700;}
     color: #343434;
     border-bottom: 3px solid #3434341f;
 }
-
-/* .form__input:focus .label__textarea::after{background-color: red;} */
 
 .textArea {height: 40px; max-width: 100%; min-width: 100%; max-height: 166px; min-height: 39px;}
 
