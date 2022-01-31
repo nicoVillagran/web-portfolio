@@ -164,7 +164,64 @@ i {font-weight: 700;}
 
 
 /* Style Childs */
-.menuButton {display: none;}
+.menuButton {display: none; position: relative;}
+.menuButton__nav {
+    display: none;
+    flex-direction: column;
+    row-gap: 1.7em;
+    align-items: flex-end;
+    /* display: none; */
+
+    position: absolute;
+    top: 130%;
+    right: 6px;
+}
+.menuButton__nav-a {
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    color: var(--fillPage);
+    font-weight: 500;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: size .6s ease-in-out;
+    /* transition: width, height, padding, display 2s; */
+}
+.nav__p{display: none;}
+.menuButton__nav-a:hover {
+    width: 140px;
+    min-width: 130px;
+    padding: 17px 14px;
+    border-radius: 30px;
+
+    column-gap: 10px;
+    justify-content: space-around;
+}
+
+.menuButton__nav-a:hover .nav__p {display: flex;}
+
+
+@keyframes size {
+    0% {
+        width: 0;
+        height: 0;
+        font-size: 0;
+    }
+
+    100% {
+    width: 50px;
+    height: 50px;
+    backdrop-filter: blur(3px);
+    }
+}
+
+
+
+
+
 .header {
     width: 100%;
     padding: 1.2rem;

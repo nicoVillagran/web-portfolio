@@ -3,15 +3,22 @@ const all = document.querySelector(".all");
 const header = document.querySelector("#header");
 const headerNav = document.querySelector(".header__nav");
 const headerA = document.querySelector(".header__a");
+const button = document.querySelector(".menuButton");
 const stateScroll = scrollY;
 
 // DOM Events
-// headerA.addEventListener("mouseover", menuResponsive);
+button.addEventListener("click", menuResponsive);
 addEventListener("scroll", windowScroll);
 
 // Associated Functions
 function menuResponsive(){
-    alert("hello, i am a button");
+    if(this.name == "false") {
+        document.querySelector(".menuButton__nav").style.display = "flex";
+        this.name = true;
+    }else {
+        document.querySelector(".menuButton__nav").style.display = "none";
+        this.name = false;
+    }
 }
 
 function windowScroll() {
