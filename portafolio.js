@@ -4,19 +4,26 @@ const header = document.querySelector("#header");
 const headerNav = document.querySelector(".header__nav");
 const headerA = document.querySelector(".header__a");
 const button = document.querySelector(".menuButton");
+const form = document.querySelector(".form");
 const stateScroll = scrollY;
 
 // DOM Events
 button.addEventListener("click", menuResponsive);
 addEventListener("scroll", windowScroll);
+form.addEventListener("submit", handleSubmit);
 
 // Associated Functions
 function menuResponsive(){
+    let num = 300;
     if(this.name == "false") {
-        document.querySelector(".menuButton__nav").style.display = "flex";
+        document.querySelectorAll(".menuButton__nav-a").forEach(e => e.style.right = 0)
         this.name = true;
-    }else {
-        document.querySelector(".menuButton__nav").style.display = "none";
+    }
+    else {
+        document.querySelectorAll(".menuButton__nav-a").forEach((e) => {
+            num += 40
+            e.style.right = `-${num}%`;
+        })
         this.name = false;
     }
 }
@@ -27,7 +34,6 @@ function windowScroll() {
 
     if(this.scrollY >= 520) {
         newSpan.classList.replace("header__a", "new__a");
-        // document.querySelectorAll(".span").forEach(e => e.removeAttribute("hidden"));
         header.classList.add("header__scroll");
         spans.forEach(e => e.style.color = "#1F618D")
     }
@@ -35,6 +41,24 @@ function windowScroll() {
         newSpan.classList.replace("new__a", "header__a");
         header.classList.remove("header__scroll");
         spans.forEach(e => e.style.color = "#fff");
+    }
+}
+
+async function handleSubmit(e) {
+    e.preventDefault();
+    const formDate = new FormData(this);
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: formDate,
+        headers: {
+            'Accept': 'application/json'
+        } 
+    })
+    if (response.ok) {
+        this.reset();
+        alert("Thank you for contact me, i will write you");
+    } else {
+        alert("Oops! There was a problem submitting your form")
     }
 }
 // ------------------------------------------------------------ JS code.

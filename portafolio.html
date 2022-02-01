@@ -22,32 +22,33 @@
         <button class="menuButton" name="false">
             <img src="iconMenu.svg" alt="">
 
-            <nav class="menuButton__nav">
-                <a href="#home" class="menuButton__nav-a">
-                    <i class="fas fa-home nav__icon"></i>
-                    <p class="nav__p">Home</p>
-                </a>
-                <a href="#aboutMe" class="menuButton__nav-a">
-                    <i class="fas fa-address-card nav__icon"></i>
-                    <p class="nav__p">About me</p>
-                </a>
-                <a href="#proyects" class="menuButton__nav-a">
-                    <i class="fas fa-project-diagram nav__icon"></i>
-                    <p class="nav__p">Projects</p>
-                </a>
-                <a href="#contact" class="menuButton__nav-a">
-                    <i class="fas fa-id-badge nav__icon"></i>
-                    <p class="nav__p">Contact</p>
-                </a>
+            <a href="#home" class="menuButton__nav-a">
+                <img src="images/iconHome.svg" alt="" class="menuButton__icon">
+                <p class="nav__p">Home</p>
+            </a>
+            <a href="#aboutMe" class="menuButton__nav-a">
+                <img src="images/iconAboutMe.svg" alt="" class="menuButton__icon">
+                <p class="nav__p">About me</p>
+            </a>
+            <a href="#proyects" class="menuButton__nav-a">
+                <img src="images/iconProject.svg" alt="" class="menuButton__icon">
+                <p class="nav__p">Projects</p>
+            </a>
+            <a href="#contact" class="menuButton__nav-a">
+                <img src="images/iconContact.svg" alt="" class="menuButton__icon-2">
+                <p class="nav__p">Contact</p>
+            </a>
+            
+            <a href="" class="menuButton__nav-a">
+                <img src="images/iconMore.svg" alt="" class="menuButton__icon-2">
+                <p class="nav__p">More</p>
+            </a>
+
+            <!-- <nav class="menuButton__nav">
                 
-                <a href="" class="menuButton__nav-a">
-                    <i class="fas fa-plus"></i>
-                    <p class="nav__p">More</p>
-                </a>
-            </nav>
+            </nav> -->
         </button>
 
-        
         <header class="header" id="header">
             <nav class="header__nav">
                 <a href="#home" class="header__li-a" tabindex="2">
@@ -175,16 +176,45 @@
                 <h3 class="tecnology__h3">My tecnology</h3>
 
                 <div class="tecnology__div">
-                    <img src="HTML5 - 2.svg" alt="logo-html5-html-svg">
-                    <img src="CSS - 2.svg" alt="logo-css-svg">
-                    <img src="javascript -2.svg" alt="logo-javascript-svg">
-                    <img src="wordpress.svg" alt="logo-wordpress-svg">
-                    <img src="Figma.svg" alt="logo-figma-svg">
-                    <img src="Boostrap.svg" alt="logo-boostrap-svg">
-                    <img src="JQuery.svg" alt="logo-jquery-svg">
-                    <img src="Git-hub.svg" alt="logo-git-hub-svg">
-                    <img src="git.svg" alt="logo-git-svg-circle" style="width: 125px;">
-                    <img src="php.svg" alt="logo-php-svg-circle" style="width: 125px;">
+                    <div class="tecnology__logos">
+                        <img src="images/html5-logo.svg" alt="logo-html5-html-svg" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/css-logo.svg" alt="logo-css-svg" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/javascript-logo.svg" alt="logo-javascript-svg" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/wordpress-logo.svg" alt="logo-wordpress-svg" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/figma-logo.svg" alt="logo-figma-svg" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/boostrap-logo.svg" alt="logo-boostrap-svg" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/jquery-logo.svg" alt="logo-jquery-svg" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/github-logo.svg" alt="logo-git-hub-svg" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/git-logo.svg" alt="logo-git-svg-circle" class="tecnology__icon">
+                    </div>
+
+                    <div class="tecnology__logos">
+                        <img src="images/php-logo.svg" alt="logo-php-svg-circle" class="tecnology__icon">
+                    </div>
                 </div>
             </article>
 
@@ -205,27 +235,26 @@
             <article class="contact area" id="contact">
                 <div class="conteinerIllustration">
                     <div class="illustration">
-                        <!-- <img src="../html, css y javascript/practicas2/cara_ilustracion.svg" alt=""> -->
                         <img src="message.svg" alt="">
                     </div>
                 </div>
 
-                    <form class="form">
+                    <form class="form" action="https://formspree.io/f/mknyjoan" method="POST">
                         <h4 class="tecnology__h3 form__h3">Contact me</h4>
 
                         <div class="form__label" tabindex="1">
-                            <input type="email" placeholder="E-mail" class="form__input">
+                            <input type="email" placeholder="E-mail" class="form__input" required>
                         </div>
 
                         <div class="form__label" tabindex="1">
-                            <input type="text" placeholder="Motive" class="form__input">
+                            <input type="text" placeholder="Motive" class="form__input" required>
                         </div>
                         
                         <div class="label__textarea">
                             <textarea class="form__input textArea" placeholder="Message" name="textarea" cols="30" rows="10"></textarea>
-                            <!-- <input type="text" placeholder="Mensaje" class="form__input"> cambiar y hacer adaptable a el contenido -->
+                            <!-- <input type="text" placeholder="Message" class="form__input textareaInput"> -->
                         </div>
-                        <input type="submit" value="Submit" class="form__buttom">
+                        <input type="submit" value="Send" class="form__buttom">
                     </form>
             </article>
         </section>
