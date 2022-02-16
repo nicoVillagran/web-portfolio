@@ -379,6 +379,26 @@ i {font-weight: 700;}
     padding: 0 7px;
 }
 
+.inicio__a {font-size: 25px;}
+.fa-angle-double-down {
+    background-image: linear-gradient(15deg, 
+    transparent, #ffffff80, #fafafafa, 
+    transparent, #ffffff80, #fffffffa, 
+    transparent, #ffffff80, #fffffffa,
+    transparent, #ffffff80, #fffffffa, 
+    transparent, #ffffff80, #fffffffa, 
+    transparent, #ffffff80, #fffffffa);
+    background-size: 7000%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fond-anim 10s linear infinite;
+}
+
+@keyframes fond-anim {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
 .aboutMe__illustration {padding: 0 4.96875em;}
 
 .aboutMe__text-h2 {
@@ -668,7 +688,7 @@ i {font-weight: 700;}
 
 .fab, .fas {
     font-size: 1.2em;
-    color: #fff;
+    /* color: #fff; */
 }
 
 
