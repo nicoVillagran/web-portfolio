@@ -5,7 +5,8 @@ const headerNav = document.querySelector(".header__nav");
 const headerA = document.querySelector(".header__a");
 const button = document.querySelector(".menuButton");
 const form = document.querySelector(".form");
-const stateScroll = scrollY;
+let spans;
+let newSpan;
 
 // DOM Events
 button.addEventListener("click", menuResponsive);
@@ -29,18 +30,22 @@ function menuResponsive(){
 }
 
 function windowScroll() {
-    let spans = document.querySelectorAll(".nav__span");
-    let newSpan = document.querySelector(".span2");
+    spans = document.querySelectorAll(".header__li-a");
+    newSpan = document.querySelector(".span2");
 
     if(this.scrollY >= 520) {
         newSpan.classList.replace("header__a", "new__a");
         header.classList.add("header__scroll");
-        spans.forEach(e => e.style.color = "#1F618D")
+        // spans.forEach(e => e.style.color = "#1F618D")
+        spans.forEach((e) => {
+            if (e.getAttribute("name")) e.classList.replace("header__li-a", "header__scroll-a");
+        })
     }
     else {
         newSpan.classList.replace("new__a", "header__a");
         header.classList.remove("header__scroll");
-        spans.forEach(e => e.style.color = "#fff");
+        document.querySelectorAll(".header__scroll-a").forEach(e => e.classList.replace("header__scroll-a", "header__li-a"));
+        // spans.forEach(e => e.style.color = "#fff");
     }
 }
 
